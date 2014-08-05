@@ -12,7 +12,7 @@ Twetter::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root :to => 'home#index'
 
-  get ':profile' => 'profiles#show'
+  get 'twets/:profile_page' => 'twets#profile_page'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

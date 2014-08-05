@@ -8,6 +8,12 @@ class TwetsController < ApplicationController
   #
   #   @twets # => All twets defaultly shown to the authenticated user.
   #
+
+  def profile_page
+    @profile = params[:id]
+    @user_twets = Twet.where(user_id: 1)    
+  end
+
   def index
     get_twets
   end
