@@ -10,8 +10,8 @@ class TwetsController < ApplicationController
   #
 
   def profile_page
-    @profile = params[:id]
-    @user_twets = Twet.where(user_id: 1)    
+    @profile = params[:profile_page].downcase
+    @user_twets = Twet.where(user_id: User.where(["lower(username) = ?", @profile]).first.id)  
   end
 
   def index
