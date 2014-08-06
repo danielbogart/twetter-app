@@ -16,7 +16,7 @@
         <%= link_to (content_tag :small, "@"+twet.user.username, :class => 'text-muted pad-10 text-middle'), '/twets/'+twet.user.username %>
         <%= content_tag :small, twet.created_at.strftime("%b %-d"), :class => 'text-muted text-middle pull-right' %>
         <div class="clearfix"></div>
-        <%= content_tag :p, twet.content %>
+        <%= content_tag :p, twet.content.gsub!(/a/, link_to("asdf", 'www.url.com')) %>
       </li>
       <li><hr></li>
       <% end -%>
