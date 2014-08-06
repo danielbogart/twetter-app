@@ -50,6 +50,8 @@ class TwetsController < ApplicationController
     @twets = current_user.all_twets
   end
 
+  # Replaces @username with link to user profile
+
   # http://guides.rubyonrails.org/action_controller_overview.html#strong-parameters
   #
   # This method uses Strong Parameters to ensure that the data passed by the user
