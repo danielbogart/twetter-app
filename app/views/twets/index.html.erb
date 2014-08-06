@@ -16,6 +16,9 @@
         <%= link_to (content_tag :small, "@"+twet.user.username, :class => 'text-muted pad-10 text-middle'), '/twets/'+twet.user.username %>
         <%= content_tag :small, twet.created_at.strftime("%b %-d"), :class => 'text-muted text-middle pull-right' %>
         <div class="clearfix"></div>
+        
+        <!--Can this go in a controller? Also, need to check if the @username is an actual username before linking-->
+
         <% if twet.content.include? "@" %>
           <% username = twet.content.match(/@(\w+)/) %>
           <%= content_tag :p, twet.content.gsub!(/@(\w+)/, link_to(username, '/twets/'+username.to_s.gsub(/@/,""))).html_safe  %>
