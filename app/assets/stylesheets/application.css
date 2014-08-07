@@ -25,3 +25,12 @@
 #noPad {
 	padding: 0;
 }
+
+.float-right {
+	display: inline-block;
+}
+
+.iBlock {
+	display: inline-block;
+	width: 90%;
+}
