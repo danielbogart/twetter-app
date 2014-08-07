@@ -9,7 +9,6 @@ class TwetsController < ApplicationController
   #   @twets # => All twets defaultly shown to the authenticated user.
   #
 
-
   def profile_page
     @profile = params[:profile_page].downcase
     @user_twets = Twet.where(user_id: User.where(["lower(username) = ?", @profile]).first.id)  
