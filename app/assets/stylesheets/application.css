@@ -13,3 +13,15 @@
  *= require_tree .
  */
 
+.noLinkStyle {
+	text-decoration: none;
+	font: 20;
+}
+
+.noLinkStyle:link {
+	text-decoration: none;
+}
+
+#noPad {
+	padding: 0;
+}
