@@ -80,7 +80,7 @@ module ApplicationHelper
     html.html_safe
   end
 
-  def avatar_url(user)
+  def avatar_url(user) #user is the parameter this method receives and can then work with. on left nav view, it is coming from the "current_user"
     gravatar_id = Digest::MD5.hexdigest(user.email.downcase)
     "http://gravatar.com/avatar/#{gravatar_id}.png?s=108"
   end
