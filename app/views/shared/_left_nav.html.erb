@@ -1,6 +1,6 @@
 <div class="col-md-4">
-  <ul class="nav nav-pills nav-stacked well text-left">
-    <li>Avatar Column</li>
+  <ul class="nav nav-pills nav-stacked well text-center">
+    <li><%= image_tag avatar_url(current_user) %></li>
     <li>
       <%= content_tag :strong, current_user.name %>
     </li>
