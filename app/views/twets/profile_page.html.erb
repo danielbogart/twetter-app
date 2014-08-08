@@ -10,7 +10,7 @@
     <div class="clearfix"></div>
     <hr />
     <ol class="list-unstyled">
-      <% @user_twets.each do |twet| -%>
+      <% @user_twets.reverse.each do |twet| -%>
       <li>
         <%= content_tag :strong, twet.user.name, :class => 'pull-left text-middle' %>
         <%= link_to (content_tag :small, "@"+twet.user.username, :class => 'text-muted pad-10 text-middle'), '/twets/'+twet.user.username %>
