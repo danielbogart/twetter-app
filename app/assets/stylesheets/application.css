@@ -22,6 +22,26 @@
 	text-decoration: none;
 }
 
+
+.noLinkStyle:link:hover {
+	text-decoration: none;
+}
+
 #noPad {
 	padding: 0;
 }
+
+.float-right {
+	display: inline-block;
+}
+
+.iBlock {
+	display: inline-block;
+	width: 90%;
+}
+
+.smallText {
+	font: 5;
+}
+
+
