@@ -39,6 +39,15 @@ module ApplicationHelper
     end
   end
 
+  def twet_link_replacer(twet)
+      if twet.content.include? "@" 
+        username = twet.content.match(/@(\w+)/) 
+        content_tag :p, twet.content.gsub!(/@(\w+)/, link_to(username, '/twets/'+username.to_s.gsub(/@/,""))).html_safe  
+      else 
+        content_tag :p, twet.content 
+      end 
+  end
+
   private
 
   # Returns 'active' or '' based on the name past and the current controller. Used by

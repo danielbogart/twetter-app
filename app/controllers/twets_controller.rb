@@ -16,6 +16,7 @@ class TwetsController < ApplicationController
 
   def index
     get_twets
+    @twet = Twet.new
   end
 
   # POST /twets
